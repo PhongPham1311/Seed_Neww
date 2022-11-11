@@ -227,40 +227,7 @@ class _FirstgameState extends State<Firstgame> {
                           ),
                         ),
                       ),
-                      Positioned(
-                        top: 170,
-                        left: 250,
-                        child: InkWell(
-                          child: Container(
-                            width: 100,
-                            height: 40,
-                            alignment: Alignment.center,
-                            decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage('img/arrowright.png'),
-                                    fit: BoxFit.fill)),
-                            child: const Text(
-                              'Tiếp Tục',
-                              style: TextStyle(
-                                  shadows: [
-                                    Shadow(
-                                      offset: Offset(5, 3),
-                                      blurRadius: 10,
-                                      color: Colors.black,
-                                    ),
-                                  ],
-                                  color: Colors.white,
-                                  fontFamily: 'Mono',
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w800),
-                            ),
-                          ),
-                          onTap: () {
-                            Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const MainGame()));
-                          },
-                        ),
-                      )
+                     
                     ],
                   ),
                 ],
