@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:seed_new/screens/main_game.dart';
+import 'main_game.dart';
 class Firstgame extends StatefulWidget {
   const Firstgame({super.key});
 
