@@ -100,7 +100,25 @@ class _ReadyState extends State<Ready> {
                               fontWeight: FontWeight.w800),
                         ),
                       ),
-                      
+                      const Positioned(
+                        top: 60,
+                        left: 90,
+                        child: Text(
+                          'Lớp lá',
+                          style: TextStyle(
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(5, 3),
+                                  blurRadius: 10,
+                                  color: Colors.black,
+                                ),
+                              ],
+                              color: Color.fromARGB(255, 241, 244, 54),
+                              fontFamily: 'Mono',
+                              fontSize: 13,
+                              fontWeight: FontWeight.w800),
+                        ),
+                      )
                     ],
                   ),
                 ),
