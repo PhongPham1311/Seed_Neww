@@ -431,11 +431,11 @@ _onTapRegisterfail(BuildContext context) {
                 width: 150,
               ),
               //positon được dùng trong widget stack dùng để chỉnh vị trí của witget con của positon ở vị trí mong muốn
-              Positioned(
-                top: 10,
-                left: 25,
-                child: InkWell(
-                    child: const Text(
+                Positioned(
+                    top: 10,
+                    left: 25,
+                    child: InkWell(
+                  child:const Text(
                       'Thông Báo',
                       style: TextStyle(
                           shadows: [
@@ -450,12 +450,13 @@ _onTapRegisterfail(BuildContext context) {
                           fontSize: 20,
                           fontWeight: FontWeight.w600),
                     ),
-                    onTap: () {
-                      showDialog(
-                          context: context,
-                          builder: (context) => _onTapRegistersuccess(context));
-                    }),
-              )
+                    onTap:() {
+                    showDialog(
+                        context: context,
+                        builder: (context) => _onTapRegistersuccess(context));
+                  }
+                  ),
+                  )
             ]),
           ),
         ),

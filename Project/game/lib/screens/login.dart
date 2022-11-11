@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:seed_new/screens/firstgame.dart';
-
+import'package:seed_new/screens/firstgame.dart';
 class Login extends StatefulWidget {
   const Login({super.key});
   @override
@@ -24,9 +23,7 @@ class _LoginState extends State<Login> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Container(
-                margin: EdgeInsets.only(
-                    left: MediaQuery.of(context).size.width / 2 - 180),
+              Container(margin: EdgeInsets.only(left: MediaQuery.of(context).size.width/2-180),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -224,12 +221,8 @@ class _LoginState extends State<Login> {
                             fontWeight: FontWeight.w800),
                       ),
                     ),
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Firstgame()));
-                    },
+                    onTap: () { Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Firstgame()));},
                   ),
                 ],
               ),

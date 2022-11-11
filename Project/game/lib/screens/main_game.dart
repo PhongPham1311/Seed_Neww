@@ -413,6 +413,7 @@ class _MainGameState extends State<MainGame> {
         ));
   }
 }
+
 _ontapchangename(BuildContext context) {
   return Material(
     color: const Color(0x00000000),
@@ -555,6 +556,7 @@ _ontapchangename(BuildContext context) {
     ),
   );
 }
+
 _ontapviewprofile(BuildContext context) {
   return Material(
     color: const Color(0x00000000),
@@ -882,6 +884,7 @@ _ontapviewprofile(BuildContext context) {
     ),
   );
 }
+
 _ontapchangeavatar(BuildContext context) {
   return Material(
     color: const Color(0x00000000),
@@ -1067,3 +1070,221 @@ _ontapchangeavatar(BuildContext context) {
   );
 }
 
+class _ontapsetting extends StatefulWidget {
+  const _ontapsetting({super.key});
+
+  @override
+  State<_ontapsetting> createState() => __ontapsettingState();
+}
+
+class __ontapsettingState extends State<_ontapsetting> {
+  double _valuesound = 0;
+  double _valuemusic = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: const Color(0x00000000),
+      child: Stack(
+        alignment: Alignment.topCenter,
+        children: [
+          Positioned(
+            top: 150.0,
+            child: Container(
+                padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                height: 400,
+                width: 360,
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('img/frame4.png'), fit: BoxFit.fill)),
+                child: Container(
+                  margin: const EdgeInsets.fromLTRB(50, 80, 50, 80),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            '    Âm Thanh',
+                            style: TextStyle(
+                                shadows: [
+                                  Shadow(
+                                    offset: Offset(5, 3),
+                                    blurRadius: 10,
+                                    color: Colors.black,
+                                  ),
+                                ],
+                                color: Color.fromARGB(255, 255, 255, 255),
+                                fontFamily: 'Mono',
+                                fontSize: 15,
+                                fontWeight: FontWeight.w800),
+                          ),
+                          Row(
+                            children: [
+                              Image.asset(
+                                'img/sound.png',
+                                height: 50,
+                                width: 50,
+                              ),
+                              Slider(
+                                min: 0.0,
+                                max: 100.0,
+                                activeColor: Color.fromARGB(255, 107, 226, 9),
+                                inactiveColor:
+                                    Color.fromARGB(255, 255, 255, 255),
+                                thumbColor: Color.fromARGB(255, 107, 226, 9),
+                                value: _valuesound,
+                                onChanged: (value) {
+                                  setState(() {
+                                    _valuesound = value;
+                                  });
+                                },
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            '    Nhạc Nền',
+                            style: TextStyle(
+                                shadows: [
+                                  Shadow(
+                                    offset: Offset(5, 3),
+                                    blurRadius: 10,
+                                    color: Colors.black,
+                                  ),
+                                ],
+                                color: Color.fromARGB(255, 255, 255, 255),
+                                fontFamily: 'Mono',
+                                fontSize: 15,
+                                fontWeight: FontWeight.w800),
+                          ),
+                          Row(
+                            children: [
+                              Image.asset(
+                                'img/music.png',
+                                height: 50,
+                                width: 50,
+                              ),
+                              Slider(
+                                min: 0.0,
+                                max: 100.0,
+                                activeColor: Color.fromARGB(255, 107, 226, 9),
+                                inactiveColor:
+                                    Color.fromARGB(255, 255, 255, 255),
+                                thumbColor: Color.fromARGB(255, 107, 226, 9),
+                                value: _valuemusic,
+                                onChanged: (value) {
+                                  setState(() {
+                                    _valuemusic = value;
+                                  });
+                                },
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                      Container(
+                        width: 180,
+                        height: 60,
+                        alignment: Alignment.center,
+                        decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('img/button4.png'),
+                                fit: BoxFit.fill)),
+                        child: const Text(
+                          'LUẬT CHƠI',
+                          style: TextStyle(
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(5, 3),
+                                  blurRadius: 10,
+                                  color: Colors.black,
+                                ),
+                              ],
+                              color: Colors.white,
+                              fontFamily: 'Mono',
+                              fontSize: 18,
+                              fontWeight: FontWeight.w800),
+                        ),
+                      ),
+                    ],
+                  ),
+                )),
+          ),
+          Positioned(
+              top: 135,
+              right: 15,
+              child: InkWell(
+                child: Image.asset(
+                  'img/cancelbutton.png',
+                  width: 50,
+                  height: 50,
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              )),
+          Positioned(
+            top: 510,
+            child: Container(
+              width: 100,
+              height: 50,
+              alignment: Alignment.center,
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('img/button1.png'), fit: BoxFit.fill)),
+              child: InkWell(
+                child: const Text(
+                  'Lưu',
+                  style: TextStyle(
+                      shadows: [
+                        Shadow(
+                          offset: Offset(5, 3),
+                          blurRadius: 10,
+                          color: Colors.black,
+                        ),
+                      ],
+                      color: Colors.white,
+                      fontFamily: 'Mono',
+                      fontSize: 20,
+                      fontWeight: FontWeight.w800),
+                ),
+                onTap: () {},
+              ),
+            ),
+          ),
+          Positioned(
+              top: 120,
+              child: Container(
+                alignment: Alignment.center,
+                width: 200,
+                height: 70,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('img/frame1.png'), fit: BoxFit.fill),
+                ),
+                child: const Text(
+                  'Cài Đặt',
+                  style: TextStyle(
+                      shadows: [
+                        Shadow(
+                          offset: Offset(5, 3),
+                          blurRadius: 10,
+                          color: Colors.black,
+                        ),
+                      ],
+                      color: Colors.white,
+                      fontFamily: 'Mono',
+                      fontSize: 20,
+                      fontWeight: FontWeight.w800),
+                ),
+              )),
+        ],
+      ),
+    );
+  }
+}
