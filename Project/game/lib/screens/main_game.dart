@@ -1169,20 +1169,7 @@ class __ontapsettingState extends State<_ontapsetting> {
                                 height: 50,
                                 width: 50,
                               ),
-                              Slider(
-                                min: 0.0,
-                                max: 100.0,
-                                activeColor: Color.fromARGB(255, 107, 226, 9),
-                                inactiveColor:
-                                    Color.fromARGB(255, 255, 255, 255),
-                                thumbColor: Color.fromARGB(255, 107, 226, 9),
-                                value: _valuemusic,
-                                onChanged: (value) {
-                                  setState(() {
-                                    _valuemusic = value;
-                                  });
-                                },
-                              )
+                              
                             ],
                           ),
                         ],
