@@ -11,7 +11,8 @@ class _FirstgameState extends State<Firstgame> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
- //khi bàn phím xuất hiện sẽ không làm vỡ layout của giao diện
+        resizeToAvoidBottomInset:
+            false, //khi bàn phím xuất hiện sẽ không làm vỡ layout của giao diện
         body: Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
