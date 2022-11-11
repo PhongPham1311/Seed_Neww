@@ -555,3 +555,330 @@ _ontapchangename(BuildContext context) {
     ),
   );
 }
+_ontapviewprofile(BuildContext context) {
+  return Material(
+    color: const Color(0x00000000),
+    child: Stack(
+      alignment: Alignment.topCenter,
+      children: [
+        Positioned(
+          top: 60.0,
+          child: Container(
+              padding: const EdgeInsets.fromLTRB(10, 0, 0, 100),
+              height: 650,
+              width: 340,
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('img/frame2.png'), fit: BoxFit.fill)),
+              child: Container(
+                margin: EdgeInsets.fromLTRB(20, 80, 20, 0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.fromLTRB(90, 0, 90, 0),
+                      alignment: Alignment.center,
+                      child: Stack(
+                        children: [
+                          const CircleAvatar(
+                            backgroundImage: AssetImage('img/avatar.jpg'),
+                            radius: 40,
+                          ),
+                          Positioned(
+                            top: 60,
+                            right: 0,
+                            child: InkWell(
+                              child: Image.asset(
+                                'img/iconchangename.png',
+                                width: 20,
+                                height: 20,
+                              ),
+                              onTap: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (context) =>
+                                        _ontapchangeavatar(context));
+                              },
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    const Text(
+                      'User_Name',
+                      style: TextStyle(
+                          shadows: [
+                            Shadow(
+                              offset: Offset(5, 3),
+                              blurRadius: 10,
+                              color: Colors.black,
+                            ),
+                          ],
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontFamily: 'Mono',
+                          fontSize: 15,
+                          fontWeight: FontWeight.w800),
+                    ),
+                    const Text(
+                      'Cấp 15',
+                      style: TextStyle(
+                          shadows: [
+                            Shadow(
+                              offset: Offset(5, 3),
+                              blurRadius: 10,
+                              color: Colors.black,
+                            ),
+                          ],
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontFamily: 'Mono',
+                          fontSize: 15,
+                          fontWeight: FontWeight.w800),
+                    ),
+                    Container(
+                      width: 110,
+                      height: 40,
+                      alignment: Alignment.center,
+                      decoration: const BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage('img/button4.png'),
+                              fit: BoxFit.fill)),
+                      child: const Text(
+                        'Danh Hiệu',
+                        style: TextStyle(
+                            shadows: [
+                              Shadow(
+                                offset: Offset(5, 3),
+                                blurRadius: 10,
+                                color: Colors.black,
+                              ),
+                            ],
+                            color: Colors.white,
+                            fontFamily: 'Mono',
+                            fontSize: 15,
+                            fontWeight: FontWeight.w800),
+                      ),
+                    ),
+                    Container(
+                      width: 350,
+                      height: 135,
+                      alignment: Alignment.center,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Đối Kháng Ngẫu Nhiên',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 0, 0, 0),
+                                fontFamily: 'Mono',
+                                fontSize: 18,
+                                fontWeight: FontWeight.w800),
+                          ),
+                          Container(
+                            width: 270,
+                            height: 100,
+                            padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                            alignment: Alignment.center,
+                            decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage('img/buttonhome.png'),
+                                    fit: BoxFit.fill)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: const [
+                                    Text(
+                                      'SỐ TRẬN',
+                                      style: TextStyle(
+                                          color:
+                                              Color.fromARGB(255, 245, 196, 0),
+                                          fontFamily: 'Mono',
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.w800),
+                                    ),
+                                    Text(
+                                      '99 TRẬN',
+                                      style: TextStyle(
+                                          color: Color.fromARGB(
+                                              255, 242, 197, 116),
+                                          fontFamily: 'Mono',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w800),
+                                    ),
+                                  ],
+                                ),
+                                Container(
+                                  color: Color.fromARGB(255, 255, 244, 212),
+                                  width: 2,
+                                  height: 50,
+                                ),
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: const [
+                                    Text(
+                                      'TỶ LỆ THẮNG',
+                                      style: TextStyle(
+                                          color:
+                                              Color.fromARGB(255, 245, 196, 0),
+                                          fontFamily: 'Mono',
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.w800),
+                                    ),
+                                    Text(
+                                      '99%',
+                                      style: TextStyle(
+                                          color: Color.fromARGB(
+                                              255, 242, 197, 116),
+                                          fontFamily: 'Mono',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w800),
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: 350,
+                      height: 135,
+                      alignment: Alignment.center,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            'Tự Luyện',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 0, 0, 0),
+                                fontFamily: 'Mono',
+                                fontSize: 18,
+                                fontWeight: FontWeight.w800),
+                          ),
+                          Container(
+                            width: 270,
+                            height: 100,
+                            padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                            alignment: Alignment.center,
+                            decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage('img/buttonhome.png'),
+                                    fit: BoxFit.fill)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: const [
+                                    Text(
+                                      'SỐ TRẬN',
+                                      style: TextStyle(
+                                          color:
+                                              Color.fromARGB(255, 245, 196, 0),
+                                          fontFamily: 'Mono',
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.w800),
+                                    ),
+                                    Text(
+                                      '99 TRẬN',
+                                      style: TextStyle(
+                                          color: Color.fromARGB(
+                                              255, 242, 197, 116),
+                                          fontFamily: 'Mono',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w800),
+                                    ),
+                                  ],
+                                ),
+                                Container(
+                                  color: Color.fromARGB(255, 255, 244, 212),
+                                  width: 2,
+                                  height: 50,
+                                ),
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: const [
+                                    Text(
+                                      'ĐIỂM CAO NHẤT',
+                                      style: TextStyle(
+                                          color:
+                                              Color.fromARGB(255, 245, 196, 0),
+                                          fontFamily: 'Mono',
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.w800),
+                                    ),
+                                    Text(
+                                      '1280',
+                                      style: TextStyle(
+                                          color: Color.fromARGB(
+                                              255, 242, 197, 116),
+                                          fontFamily: 'Mono',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w800),
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              )),
+        ),
+        Positioned(
+            top: 30,
+            child: Container(
+              alignment: Alignment.center,
+              width: 280,
+              height: 90,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('img/frame1.png'), fit: BoxFit.fill),
+              ),
+              child: const Text(
+                'Trang Cá Nhân',
+                style: TextStyle(
+                    shadows: [
+                      Shadow(
+                        offset: Offset(5, 3),
+                        blurRadius: 10,
+                        color: Colors.black,
+                      ),
+                    ],
+                    color: Colors.white,
+                    fontFamily: 'Mono',
+                    fontSize: 20,
+                    fontWeight: FontWeight.w800),
+              ),
+            )),
+        Positioned(
+            top: 40,
+            right: 5,
+            child: InkWell(
+              child: Image.asset(
+                'img/cancelbutton.png',
+                width: 50,
+                height: 50,
+              ),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            )),
+      ],
+    ),
+  );
+}
