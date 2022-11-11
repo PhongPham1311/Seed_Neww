@@ -3,13 +3,7 @@ import 'screens/login.dart';
 import 'screens/register.dart';
 import 'package:flutter/services.dart';
 
-void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setEnabledSystemUIOverlays([
-    SystemUiOverlay.bottom, //This line is used for showing the bottom bar
-  ]);
-  runApp(const MyApp());
-}
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
