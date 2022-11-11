@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import'package:seed_new/screens/firstgame.dart';
+import'firstgame.dart';
 class Login extends StatefulWidget {
   const Login({super.key});
   @override
