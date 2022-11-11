@@ -413,3 +413,145 @@ class _MainGameState extends State<MainGame> {
         ));
   }
 }
+_ontapchangename(BuildContext context) {
+  return Material(
+    color: const Color(0x00000000),
+    child: Stack(
+      alignment: Alignment.topCenter,
+      children: [
+        Positioned(
+          top: 300.0,
+          child: Container(
+              margin: const EdgeInsets.only(
+                left: 10,
+              ),
+              height: 200,
+              width: 340,
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('img/frame2.png'), fit: BoxFit.fill)),
+              child: Container(
+                margin: EdgeInsets.fromLTRB(50, 50, 50, 70),
+                height: 100,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: const [
+                    Text(
+                      textAlign: TextAlign.center,
+                      'Nhập Tên Mới:',
+                      style: TextStyle(
+                          shadows: [
+                            Shadow(
+                              offset: Offset(5, 3),
+                              blurRadius: 10,
+                              color: Colors.black,
+                            ),
+                          ],
+                          color: Colors.white,
+                          fontFamily: 'Mono',
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
+                    ),
+                    SizedBox(
+                      height: 40,
+                      width: 220,
+                      child: TextField(
+                        cursorColor: Colors.black,
+                        cursorWidth: 3,
+                        cursorHeight: 20,
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Mono',
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600),
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Color(0xffFF8C4B),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(5.0)),
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(5.0)),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              )),
+        ),
+        Positioned(
+            top: 250,
+            child: Container(
+              alignment: Alignment.center,
+              width: 280,
+              height: 90,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('img/frame1.png'), fit: BoxFit.fill),
+              ),
+              child: const Text(
+                'Đổi Tên Nhân Vật',
+                style: TextStyle(
+                    shadows: [
+                      Shadow(
+                        offset: Offset(5, 3),
+                        blurRadius: 10,
+                        color: Colors.black,
+                      ),
+                    ],
+                    color: Colors.white,
+                    fontFamily: 'Mono',
+                    fontSize: 15,
+                    fontWeight: FontWeight.w800),
+              ),
+            )),
+        Positioned(
+          top: 460,
+          child: Container(
+            width: 100,
+            height: 50,
+            alignment: Alignment.center,
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('img/button1.png'), fit: BoxFit.fill)),
+            child: InkWell(
+              child: const Text(
+                'Lưu',
+                style: TextStyle(
+                    shadows: [
+                      Shadow(
+                        offset: Offset(5, 3),
+                        blurRadius: 10,
+                        color: Colors.black,
+                      ),
+                    ],
+                    color: Colors.white,
+                    fontFamily: 'Mono',
+                    fontSize: 20,
+                    fontWeight: FontWeight.w800),
+              ),
+              onTap: () {},
+            ),
+          ),
+        ),
+        Positioned(
+            top: 280,
+            right: 5,
+            child: InkWell(
+              child: Image.asset(
+                'img/cancelbutton.png',
+                width: 50,
+                height: 50,
+              ),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            )),
+      ],
+    ),
+  );
+}
