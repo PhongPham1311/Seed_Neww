@@ -19,6 +19,7 @@ Future<void> main(List<String> args) async {
   await Firebase.initializeApp();
   runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -27,7 +28,8 @@ class MyApp extends StatelessWidget {
     return MyHomePage();
   }
 }
-lass MyHomePage extends StatefulWidget {
+
+class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
   @override
