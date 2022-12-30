@@ -1,4 +1,4 @@
-name: game
+name: init_firebase
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -36,6 +36,14 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  audioplayers: ^1.1.1
+  firebase_auth: ^4.2.1
+  cloud_firestore: ^4.2.0
+  firebase_core: ^2.4.0
+  date_field: ^3.0.2
+  shared_preferences: ^2.0.15
+  firebase_database: ^10.0.7
+  uuid: ^3.0.7
 
 dev_dependencies:
   flutter_test:
@@ -61,13 +69,19 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+     - assets/audio/
      - img/background.png
+     - img/tigerload.gif
+     - img/ready.gif
+     - img/button2.png
+     - img/cloud.png
      - img/arrowright.png
      - img/background1.png
      - img/background2.png
      - img/background3.png
      - img/logo.png
      - img/table.png
+     - img/frame7.png
      - img/return.png
      - img/logintb.png
      - img/logintoptb.png
@@ -75,12 +89,15 @@ flutter:
      - img/messagebox.png
      - img/buttonsmall.png
      - img/in4.png
+     - img/vs.png
      - img/in4small.png
      - img/icongold.png
      - img/setting.png
      - img/treetable1.png
      - img/treetable2.png
      - img/avatar.jpg
+     - img/avatar1.jpg
+     - img/avatar2.jpg
      - img/iconchangename.png
      - img/buttonhome1.png
      - img/frame.png
@@ -89,6 +106,7 @@ flutter:
      - img/frame3.png
      - img/frame4.png
      - img/frame5.png
+     - img/frame6.png
      - img/button1.png
      - img/cancelbutton.png
      - img/button4.png
@@ -100,7 +118,49 @@ flutter:
      - img/light.png
      - img/rightframe.png
      - img/leftframe.png
+     - img/rightframe1.png
+     - img/leftframe1.png
      - img/round.png
+     - img/dkng.png
+     - img/tl.png
+     - img/st1.png
+     - img/st2.png
+     - img/st3.png
+     - img/1stlogo.png
+     - img/2stlogo.png
+     - img/3stlogo.png
+     - img/totnghiep.png
+     - img/maugiao.png
+     - img/cap1.png
+     - img/cap2.png
+     - img/cap3.png
+     - img/level.png
+     - img/levelclose.png
+     - img/sao.png
+     - img/banner.png
+     - img/coin.png
+     - img/frametable.png
+     - img/exp.png
+     - img/buttonaction.png
+     - img/levelup.png
+     - img/treesad.png
+     - img/button5.png
+     - img/bglopmam.png
+     - img/bgcap1.png
+     - img/bgcap2.png
+     - img/bgcap3.png
+     - img/bgtruongdoi.png
+     - img/sao1.png
+     - img/sao2.png
+     - img/sao3.png
+     - data/history.json
+     - data/programming.json
+     - data/geography.json
+     - data/literature.json
+     - data/mucsic.json
+     - img/circle.gif
+     - img/level1.png
+  #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -113,7 +173,6 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
   fonts:
      - family: CascadiaCode
        fonts:
@@ -123,5 +182,14 @@ flutter:
      - family: Coppper
        fonts:
          - asset: font/.VnCooper.ttf
+     - family: UTM
+       fonts:
+         - asset: font/UTMAlbertaHeavy.ttf
+           weight: 700
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
