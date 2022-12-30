@@ -1,0 +1,31 @@
+{
+  "level": [
+    {
+      "id": 1,
+      "queries": [
+        {
+          "id": 1,
+          "title": "Đâu là Root Widget của 1 ứng dụng Flutter?",
+          "answers": [
+            {
+              "answerText": "Container",
+              "score": false
+            },
+            {
+              "answerText": "MaterialApp",
+              "score": true
+            },
+            {
+              "answerText": "Scaffold",
+              "score": false
+            },
+            {
+              "answerText": "Card",
+              "score": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
