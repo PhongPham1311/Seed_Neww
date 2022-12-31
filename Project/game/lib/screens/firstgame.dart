@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'main_game.dart';
+
+import '../main_game.dart';
 
 class Firstgame extends StatefulWidget {
   const Firstgame({super.key});
@@ -261,7 +262,7 @@ class _FirstgameState extends State<Firstgame> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const MainGame()));
+                                    builder: (context) =>  MainGame()));
                           },
                         ),
                       )
