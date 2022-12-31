@@ -3,8 +3,12 @@
     {
       "id": 1,
       "queries": [
+<<<<<<< HEAD
         
 		{
+=======
+        {
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 1,
           "title": "Đâu là Root Widget của 1 ứng dụng Flutter?",
           "answers": [
@@ -25,6 +29,7 @@
               "score": false
             }
           ]
+<<<<<<< HEAD
         },
 		
 		{
@@ -586,6 +591,8 @@
               "score": false
             }
           ]
+=======
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
         }
       ]
     }
