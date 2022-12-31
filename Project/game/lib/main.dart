@@ -1,24 +1,61 @@
+import 'package:audioplayers/audioplayers.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:date_field/date_field.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'screens/login.dart';
-import 'screens/register.dart';
 import 'package:flutter/services.dart';
+import 'main_game.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'firstgame.dart';
+import 'login.dart';
+import 'register.dart';
+import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_screen_wake/flutter_screen_wake.dart';
+import 'package:perfect_volume_control/perfect_volume_control.dart';
 
-void main() {
+Future<void> main(List<String> args) async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIOverlays([
     SystemUiOverlay.bottom, //This line is used for showing the bottom bar
   ]);
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
-    );
+    return Music();
+  }
+}
+
+class Music extends StatefulWidget {
+  const Music({super.key});
+
+  @override
+  State<Music> createState() => _MusicState();
+}
+
+class _MusicState extends State<Music> {
+  final player = AudioPlayer();
+  void playLocal() async {
+    await player.play(AssetSource("audio/QuizMusic.mp3"));
+  }
+
+  void loop() {
+    player.setReleaseMode(ReleaseMode.loop);
+  }
+
+
+  @override
+  Widget build(BuildContext context) {
+    playLocal();
+    loop();
+    return MyHomePage();
   }
 }
 
@@ -30,11 +67,59 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String id = "";
+  String is_logined = "";
+
+  get_is_logined() async {
+    final SharedPreferences cookie = await SharedPreferences.getInstance();
+    is_logined = cookie.getString('is_logined') != null
+        ? cookie.getString('is_logined')!
+        : '';
+    setState(() {});
+  }
+
+  get_id() async {
+    final SharedPreferences cookie = await SharedPreferences.getInstance();
+    id = cookie.getString('id') != null ? cookie.getString('id')! : '';
+    setState(() {});
+  }
+
+  @override
+  void initState() {
+    get_id();
+    get_is_logined();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (is_logined == "1" && id != "") {
+      return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: MainGame(),
+      );
+    } else {
+      return const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: MainForm(),
+      );
+    }
+  }
+}
+
+class MainForm extends StatefulWidget {
+  const MainForm({super.key});
+
+  @override
+  State<MainForm> createState() => _MainFormState();
+}
+
+class _MainFormState extends State<MainForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      margin: const EdgeInsets.only(top: 30),
+      padding: const EdgeInsets.only(top: 30),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(

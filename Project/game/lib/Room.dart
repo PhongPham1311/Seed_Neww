@@ -6,8 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:init_firebase/playpvp.dart';
 import 'package:init_firebase/ready.dart';
 
-import 'already.dart';
-
 class RoomPvp extends StatelessWidget {
   RoomPvp({super.key, required this.roomid, required this.index});
   String roomid;
@@ -86,7 +84,7 @@ class RoomPvp extends StatelessWidget {
                                   mainAxisSize: MainAxisSize.max,
                                   children: const [
                                     Text(
-                                      'ĐANG TÌM ĐỐI THỦ',
+                                      'Đang Tìm Đối Thủ',
                                       style: TextStyle(
                                           shadows: [
                                             Shadow(
@@ -101,22 +99,7 @@ class RoomPvp extends StatelessWidget {
                                           fontSize: 18,
                                           fontWeight: FontWeight.w800),
                                     ),
-                                    Text(
-                                      '1 GIÂY...',
-                                      style: TextStyle(
-                                          shadows: [
-                                            Shadow(
-                                              offset: Offset(5, 3),
-                                              blurRadius: 10,
-                                              color: Colors.black,
-                                            ),
-                                          ],
-                                          color: Color.fromARGB(
-                                              255, 255, 255, 255),
-                                          fontFamily: 'Mono',
-                                          fontSize: 13,
-                                          fontWeight: FontWeight.w800),
-                                    ),
+
                                   ],
                                 ),
                               ),

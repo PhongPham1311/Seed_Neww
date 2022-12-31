@@ -1,5 +1,9 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_screen_wake/flutter_screen_wake.dart';
+import 'package:perfect_volume_control/perfect_volume_control.dart';
 import 'hisory.dart';
 import 'main.dart';
 import 'objects/Profile.dart';
@@ -23,6 +27,15 @@ class MainGame extends StatefulWidget {
 }
 
 class _MainGameState extends State<MainGame> {
+  AudioPlayer player = AudioPlayer();
+  void playLocal() async {
+    player.setVolume(1);
+    await player.play(AssetSource("audio/select.mp3"));
+    setState(() {
+      
+    });
+  }
+
   String id = "";
   bool is_checked_TL = false;
   Future<void> set_is_logined(String value) async {
@@ -154,6 +167,7 @@ class _MainGameState extends State<MainGame> {
                                   fit: BoxFit.fill,
                                 ),
                                 onTap: () {
+                                 playLocal();
                                   showDialog(
                                       context: context,
                                       builder: (context) =>
@@ -530,8 +544,32 @@ class _MainGameState extends State<MainGame> {
                 );
               } else {
                 return Center(
-                  child: CircularProgressIndicator(),
-                );
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'img/fire.gif',
+                          width: 150,
+                          height: 150,
+                        ),
+                        Text(
+                          'Đang tải',
+                          style: TextStyle(
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(5, 3),
+                                  blurRadius: 10,
+                                  color: Colors.black,
+                                ),
+                              ],
+                              color: Colors.white,
+                              fontFamily: 'Mono',
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800),
+                        )
+                      ],
+                    ),
+                  );
               }
             },
           ),
@@ -547,8 +585,17 @@ class _ontapsetting extends StatefulWidget {
 }
 
 class __ontapsettingState extends State<_ontapsetting> {
-  double _valuesound = 0;
-  double _valuemusic = 0;
+  double currentvol = 0.5;
+  AudioPlayer player = AudioPlayer();
+  AudioCache cache = AudioCache();
+
+  @override
+  void initState() {
+    super.initState();
+    PerfectVolumeControl.hideUI = false;
+    PerfectVolumeControl.setVolume(currentvol);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -570,49 +617,6 @@ class __ontapsettingState extends State<_ontapsetting> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            '    Âm Thanh',
-                            style: TextStyle(
-                                shadows: [
-                                  Shadow(
-                                    offset: Offset(5, 3),
-                                    blurRadius: 10,
-                                    color: Colors.black,
-                                  ),
-                                ],
-                                color: Color.fromARGB(255, 255, 255, 255),
-                                fontFamily: 'Mono',
-                                fontSize: 15,
-                                fontWeight: FontWeight.w800),
-                          ),
-                          Row(
-                            children: [
-                              Image.asset(
-                                'img/sound.png',
-                                height: 50,
-                                width: 50,
-                              ),
-                              Slider(
-                                min: 0.0,
-                                max: 100.0,
-                                activeColor: Color.fromARGB(255, 107, 226, 9),
-                                inactiveColor:
-                                    Color.fromARGB(255, 255, 255, 255),
-                                thumbColor: Color.fromARGB(255, 107, 226, 9),
-                                value: _valuesound,
-                                onChanged: (value) {
-                                  setState(() {
-                                    _valuesound = value;
-                                  });
-                                },
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -639,17 +643,19 @@ class __ontapsettingState extends State<_ontapsetting> {
                                 width: 50,
                               ),
                               Slider(
-                                min: 0.0,
-                                max: 100.0,
+                                min: 0,
+                                max: 1,
+                                divisions: 100,
                                 activeColor: Color.fromARGB(255, 107, 226, 9),
                                 inactiveColor:
                                     Color.fromARGB(255, 255, 255, 255),
                                 thumbColor: Color.fromARGB(255, 107, 226, 9),
-                                value: _valuemusic,
+                                value: currentvol,
                                 onChanged: (value) {
-                                  setState(() {
-                                    _valuemusic = value;
-                                  });
+                                  currentvol = value;
+                                  PerfectVolumeControl.setVolume(
+                                      value); //set new volume
+                                  setState(() {});
                                 },
                               )
                             ],
@@ -769,7 +775,33 @@ class __ontapsettingState extends State<_ontapsetting> {
 
 _await(BuildContext context) {
   return Material(
-      color: const Color(0x00000000), child: CircularProgressIndicator());
+      color: const Color(0x00000000), child: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'img/fire.gif',
+                          width: 150,
+                          height: 150,
+                        ),
+                        Text(
+                          'Đang tải',
+                          style: TextStyle(
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(5, 3),
+                                  blurRadius: 10,
+                                  color: Colors.black,
+                                ),
+                              ],
+                              color: Colors.white,
+                              fontFamily: 'Mono',
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800),
+                        )
+                      ],
+                    ),
+                  ));
 }
 
 _messagebox(BuildContext context, String info) {

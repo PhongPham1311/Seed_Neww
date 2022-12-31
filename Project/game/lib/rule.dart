@@ -271,35 +271,7 @@ class _RuleDknnState extends State<RuleDknn> {
                                 fontSize: 13,
                                 fontWeight: FontWeight.w600),
                           ),
-                          Row(
-                            children: [
-                              Checkbox(
-                                checkColor: Colors.white,
-                                fillColor:
-                                    MaterialStateProperty.resolveWith(getColor),
-                                value: isChecked,
-                                onChanged: (bool? value) {
-                                  setState(() {
-                                    isChecked = value!;
-                                  });
-                                },
-                              ),
-                              const Text(
-                                'không hiện lại.',
-                                style: TextStyle(
-                                    shadows: [
-                                      Shadow(
-                                        offset: Offset(5, 3),
-                                        blurRadius: 10,
-                                        color: Colors.black,
-                                      ),
-                                    ],
-                                    color: Color.fromARGB(255, 236, 141, 24),
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w600),
-                              ),
-                            ],
-                          )
+                         Container(width: 20,height: 40,)
                         ],
                       ),
                     ),
@@ -431,7 +403,7 @@ class _RuleTlState extends State<RuleTl> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
-                            'Đối Kháng Ngẫu Nhiên',
+                            'Tự Luyện',
                             style: TextStyle(
                                 shadows: [
                                   Shadow(
@@ -466,35 +438,7 @@ class _RuleTlState extends State<RuleTl> {
                                 fontSize: 13,
                                 fontWeight: FontWeight.w600),
                           ),
-                          Row(
-                            children: [
-                              Checkbox(
-                                checkColor: Colors.white,
-                                fillColor:
-                                    MaterialStateProperty.resolveWith(getColor),
-                                value: isChecked,
-                                onChanged: (bool? value) {
-                                  setState(() {
-                                    isChecked = value!;
-                                  });
-                                },
-                              ),
-                              const Text(
-                                'không hiện lại.',
-                                style: TextStyle(
-                                    shadows: [
-                                      Shadow(
-                                        offset: Offset(5, 3),
-                                        blurRadius: 10,
-                                        color: Colors.black,
-                                      ),
-                                    ],
-                                    color: Color.fromARGB(255, 236, 141, 24),
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w600),
-                              ),
-                            ],
-                          )
+ Container(width: 20,height: 40,)
                         ],
                       ),
                     ),
@@ -527,8 +471,7 @@ class _RuleTlState extends State<RuleTl> {
                       fontWeight: FontWeight.w800),
                 ),
                 onTap: () {
-                  print(isChecked);
-                  set_is_checkedTL(isChecked);
+                   Navigator.pop(context);
                   Navigator.push(
                       context,
                       MaterialPageRoute(

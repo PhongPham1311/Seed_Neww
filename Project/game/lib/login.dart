@@ -70,6 +70,7 @@ class _LoginState extends State<Login> {
     var records = await FirebaseFirestore.instance.collection('profiles').get();
     maprecordsproflie(records);
   }
+
   maprecordsproflie(QuerySnapshot<Map<String, dynamic>> records) {
     var _list = records.docs
         .map((json) => Profile(
@@ -388,7 +389,31 @@ class _LoginState extends State<Login> {
                   );
                 } else {
                   return Center(
-                    child: CircularProgressIndicator(),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'img/fire.gif',
+                          width: 150,
+                          height: 150,
+                        ),
+                        Text(
+                          'Đang tải',
+                          style: TextStyle(
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(5, 3),
+                                  blurRadius: 10,
+                                  color: Colors.black,
+                                ),
+                              ],
+                              color: Colors.white,
+                              fontFamily: 'Mono',
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800),
+                        )
+                      ],
+                    ),
                   );
                 }
               },

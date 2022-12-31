@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'main_game.dart';
+
+import '../main_game.dart';
+
 class Firstgame extends StatefulWidget {
   const Firstgame({super.key});
 
@@ -105,7 +107,8 @@ class _FirstgameState extends State<Firstgame> {
                             width: 150,
                             height: 50,
                             child: Stack(children: [
-                              Positioned(left: 20,
+                              Positioned(
+                                left: 20,
                                 child: Image.asset(
                                   'img/logintoptb.png',
                                   height: 70,
@@ -139,7 +142,7 @@ class _FirstgameState extends State<Firstgame> {
                         right: 0.0,
                         left: 0.0,
                         child: Container(
-                          margin: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+                            margin: const EdgeInsets.fromLTRB(15, 0, 15, 0),
                             alignment: Alignment.center,
                             height: 100,
                             decoration: const BoxDecoration(
@@ -256,8 +259,10 @@ class _FirstgameState extends State<Firstgame> {
                             ),
                           ),
                           onTap: () {
-                            Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const MainGame()));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>  MainGame()));
                           },
                         ),
                       )

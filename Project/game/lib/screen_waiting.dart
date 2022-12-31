@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -20,10 +21,10 @@ class ScreenWaiting extends StatefulWidget {
 }
 
 class _ScreenWaitingState extends State<ScreenWaiting> {
-  List<Level> querries = [];
+  List<Querriess> querries = [];
   Future<List<dynamic>> _LoadDanhSach() async {
     final data;
-    data = await HistoryProvider.getAllQuerries();
+    data = await OnlineProvider.getAllQuerries();
     querries = data;
     return data;
   }
@@ -107,8 +108,34 @@ class _ScreenWaitingState extends State<ScreenWaiting> {
                             user1: id,
                             profile: this.widget.profile);
                   } else {
-                    return Center(
-                      child: CircularProgressIndicator(),
+                    return Scaffold(
+                      body: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'img/fire.gif',
+                            width: 150,
+                            height: 150,
+                          ),
+                          Text(
+                            'Đang tải',
+                            style: TextStyle(
+                                shadows: [
+                                  Shadow(
+                                    offset: Offset(5, 3),
+                                    blurRadius: 10,
+                                    color: Colors.black,
+                                  ),
+                                ],
+                                color: Colors.white,
+                                fontFamily: 'Mono',
+                                fontSize: 20,
+                                fontWeight: FontWeight.w800),
+                          )
+                        ],
+                      ),
+                                      ),
                     );
                   }
                 });
@@ -116,9 +143,33 @@ class _ScreenWaitingState extends State<ScreenWaiting> {
           } else {
             return Scaffold(
               body: Center(
-                child: CircularProgressIndicator(
-                  color: Colors.red,
-                ),
+                child: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'img/fire.gif',
+                          width: 150,
+                          height: 150,
+                        ),
+                        Text(
+                          'Đang tải',
+                          style: TextStyle(
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(5, 3),
+                                  blurRadius: 10,
+                                  color: Colors.black,
+                                ),
+                              ],
+                              color: Colors.white,
+                              fontFamily: 'Mono',
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800),
+                        )
+                      ],
+                    ),
+                  )
               ),
             );
           }
@@ -175,7 +226,7 @@ class CreateRoom extends StatefulWidget {
       required this.querries,
       required this.user1,
       required this.profile});
-  List<Level> querries = [];
+  List<Querriess> querries = [];
   String user1;
   Profile profile;
   @override
@@ -196,7 +247,9 @@ class _CreateRoomState extends State<CreateRoom> {
     String idd = uuid.v1();
     roomid = idd;
     DatabaseReference ref = FirebaseDatabase.instance.ref("room/" + idd);
-    List<dynamic> temp = this.widget.querries[0].queries;
+    List<dynamic> querriess = this.widget.querries;
+    List<dynamic> temp = this.widget.querries;
+    temp.shuffle();
     Room room = Room(
         id: idd,
         status: false,

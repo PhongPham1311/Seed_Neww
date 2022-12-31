@@ -38,9 +38,8 @@ class _QuerrriesState extends State<Querrries> {
     } else if (this.widget.object == "Lập Trình") {
       data = await ProgrammingProvider.getAllQuerries();
       return data;
-    }
-    else{
-      return data= List<int>.filled(5, 0);
+    } else {
+      return data = List<int>.filled(5, 0);
     }
   }
 
@@ -100,11 +99,63 @@ class _QuerrriesState extends State<Querrries> {
                       gold: snapshot.data!.gold,
                     );
                   } else
-                    return Center(child: CircularProgressIndicator());
+                    return Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'img/fire.gif',
+                          width: 150,
+                          height: 150,
+                        ),
+                        Text(
+                          'Đang tải',
+                          style: TextStyle(
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(5, 3),
+                                  blurRadius: 10,
+                                  color: Colors.black,
+                                ),
+                              ],
+                              color: Colors.white,
+                              fontFamily: 'Mono',
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800),
+                        )
+                      ],
+                    ),
+                  );
                 },
               );
             } else
-              return Center(child: CircularProgressIndicator());
+              return Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'img/fire.gif',
+                          width: 150,
+                          height: 150,
+                        ),
+                        Text(
+                          'Đang tải',
+                          style: TextStyle(
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(5, 3),
+                                  blurRadius: 10,
+                                  color: Colors.black,
+                                ),
+                              ],
+                              color: Colors.white,
+                              fontFamily: 'Mono',
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800),
+                        )
+                      ],
+                    ),
+                  );
           },
         ),
       ),
@@ -921,9 +972,9 @@ class _EndGameState extends State<EndGame> {
     final snap = await data.get();
 
     final prf = Profile.fromJson(snap.data()!);
-    int totalsrc=prf.total;
-    totalsrc+=this.widget.score;
-      data.update({'total': totalsrc});
+    int totalsrc = prf.total;
+    totalsrc += this.widget.score;
+    data.update({'total': totalsrc});
     int oldlevel = prf.level;
     int exptopup = percentexp(prf);
     int nowexp = prf.exp + widget.exp;
@@ -950,24 +1001,21 @@ class _EndGameState extends State<EndGame> {
       final snap1 = await data.get();
       int i = widget.level;
       data1.update({'level${i + 1}': true, 'score${i}': widget.score});
-    }
-    else if (widget.object == "Văn Học") {
+    } else if (widget.object == "Văn Học") {
       final data1 = await FirebaseFirestore.instance
           .collection('objectliterature')
           .doc("$id");
       final snap1 = await data.get();
       int i = widget.level;
       data1.update({'level${i + 1}': true, 'score${i}': widget.score});
-    }
-    else if (widget.object == "Âm Nhạc") {
+    } else if (widget.object == "Âm Nhạc") {
       final data1 = await FirebaseFirestore.instance
           .collection('objectmucsic')
           .doc("$id");
       final snap1 = await data.get();
       int i = widget.level;
       data1.update({'level${i + 1}': true, 'score${i}': widget.score});
-    }
-    else if (widget.object == "Lập Trình") {
+    } else if (widget.object == "Lập Trình") {
       final data1 = await FirebaseFirestore.instance
           .collection('objectprograming')
           .doc("$id");
@@ -1100,6 +1148,7 @@ class _EndGameState extends State<EndGame> {
                         InkWell(
                           onTap: () {
                             Navigator.pop(context);
+                             Navigator.pop(context);
                             Navigator.pop(context);
                           },
                           child: Container(
@@ -1125,6 +1174,8 @@ class _EndGameState extends State<EndGame> {
                         ),
                         InkWell(
                           onTap: () {
+                            Navigator.pop(context);
+                            Navigator.pop(context);
                             Navigator.push(
                               context,
                               MaterialPageRoute(
@@ -1160,7 +1211,33 @@ class _EndGameState extends State<EndGame> {
                 ],
               );
             } else
-              return Center(child: CircularProgressIndicator());
+              return Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'img/fire.gif',
+                          width: 150,
+                          height: 150,
+                        ),
+                        Text(
+                          'Đang tải',
+                          style: TextStyle(
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(5, 3),
+                                  blurRadius: 10,
+                                  color: Colors.black,
+                                ),
+                              ],
+                              color: Colors.white,
+                              fontFamily: 'Mono',
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800),
+                        )
+                      ],
+                    ),
+                  );
           },
         ));
   }

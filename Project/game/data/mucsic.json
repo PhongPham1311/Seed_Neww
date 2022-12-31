@@ -3,8 +3,12 @@
     {
       "id": 1,
       "queries": [
+<<<<<<< HEAD
+        {
+=======
         
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 1,
           "title": "Có bao nhiêu nốt nhạc cơ bản?",
           "answers": [
@@ -26,18 +30,30 @@
             }
           ]
         },
+<<<<<<< HEAD
+        {
+=======
 		
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 2,
           "title": "Thể loại nào thường được giới trẻ sử dụng vào các chuyên mục đường phố?",
           "answers": [
             {
+<<<<<<< HEAD
+              "answerText": "Rock",
+=======
               "answerText":"Rock",
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
               "score": false
             },
             {
               "answerText": "Hip Hop",
+<<<<<<< HEAD
+              "score": true
+=======
               "score":true
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
             },
             {
               "answerText": "Jazz",
@@ -45,11 +61,19 @@
             },
             {
               "answerText": "R&B",
+<<<<<<< HEAD
+              "score": false
+            }
+          ]
+        },
+        {
+=======
               "score":false
             }
           ]
         }, 
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 3,
           "title": "Nhạc công là gì?",
           "answers": [
@@ -70,18 +94,31 @@
               "score": false
             }
           ]
+<<<<<<< HEAD
+        },
+        {
+=======
         }, 
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 4,
           "title": "Loại nhạc cụ truyền thống độc đáo của vùng núi phía Bắc là gì?",
           "answers": [
             {
               "answerText": "Sáo Trúc",
+<<<<<<< HEAD
+              "score": false
+            },
+            {
+              "answerText": "Khèn",
+              "score": true
+=======
               "score":false
             },
             {
               "answerText": "Khèn",
               "score":true
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
             },
             {
               "answerText": "Đàn nhị",
@@ -92,8 +129,13 @@
               "score": false
             }
           ]
+<<<<<<< HEAD
+        },
+        {
+=======
         }, 
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 5,
           "title": "Cao độ là gì?",
           "answers": [
@@ -117,12 +159,19 @@
         }
       ]
     },
+<<<<<<< HEAD
+    {
+      "id": 2,
+      "queries": [
+        {
+=======
 	
 	{
       "id": 2,
       "queries": [
         
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 1,
           "title": "Trường độ là gì?",
           "answers": [
@@ -144,8 +193,12 @@
             }
           ]
         },
+<<<<<<< HEAD
+        {
+=======
 		
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 2,
           "title": "Ai là tác giả bài hát Lên đàng?",
           "answers": [
@@ -166,17 +219,34 @@
               "score": true
             }
           ]
+<<<<<<< HEAD
+        },
+        {
+=======
         }, 
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 3,
           "title": "Nốt nhạc nào sau đây có trường độ dài nhất?",
           "answers": [
             {
+<<<<<<< HEAD
+              "answerText": "nốt đen",
+=======
+<<<<<<< HEAD
               "answerText": "nốt đen",
               "score": false
             },
             {
+              "answerText": "nốt trắng",
+=======
+              "answerText": nốt đen",
+>>>>>>> 8d6322b028b4ef90134f925556a57b65fcd8e358
+              "score": false
+            },
+            {
               "answerText":"nốt trắng",
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
               "score": true
             },
             {
@@ -188,18 +258,31 @@
               "score": false
             }
           ]
+<<<<<<< HEAD
+        },
+        {
+=======
         }, 
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 4,
           "title": "“Chèo” thuộc loại hình nghệ thuật nào sau đây?",
           "answers": [
             {
               "answerText": "nghệ thuật sân khấu cổ",
+<<<<<<< HEAD
+              "score": true
+            },
+            {
+              "answerText": "nghệ thuật đương đại",
+              "score": false
+=======
               "score":true
             },
             {
               "answerText": "nghệ thuật đương đại",
               "score":false
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
             },
             {
               "answerText": "nghệ hiện đại",
@@ -210,8 +293,13 @@
               "score": false
             }
           ]
+<<<<<<< HEAD
+        },
+        {
+=======
         }, 
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 5,
           "title": "Bass là loại thanh điệu nào ?",
           "answers": [
@@ -229,18 +317,29 @@
             },
             {
               "answerText": "giọng nữ trầm",
+<<<<<<< HEAD
+              "score": false
+=======
               "score":false
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
             }
           ]
         }
       ]
     },
+<<<<<<< HEAD
+    {
+      "id": 3,
+      "queries": [
+        {
+=======
 	
 	{
       "id": 3,
       "queries": [
         
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 1,
           "title": "Điền vào ô trống Do>Re>Mi>[...]>[...]>La>Si?",
           "answers": [
@@ -250,7 +349,11 @@
             },
             {
               "answerText": "<Sol>,<Fa>t",
+<<<<<<< HEAD
+              "score": false
+=======
               "score":false
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
             },
             {
               "answerText": "<Pa>,<Son>",
@@ -262,8 +365,12 @@
             }
           ]
         },
+<<<<<<< HEAD
+        {
+=======
 		
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 2,
           "title": "Trong ca khúc:'Dàn đồng ca mùa hạ' của Nguyễn Minh Châu, 'Dàn đồng ca mùa hạ' ở đây dùng để chỉ điều gì?",
           "answers": [
@@ -277,15 +384,24 @@
             },
             {
               "answerText": "Tiếng hát trưa hè",
+<<<<<<< HEAD
+              "score": false
+=======
               "score":false
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
             },
             {
               "answerText": "Tiếng suối róc rách",
               "score": false
             }
           ]
+<<<<<<< HEAD
+        },
+        {
+=======
         }, 
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 3,
           "title": "Bài hát Lý cây đa thuộc dân ca vùng nào?",
           "answers": [
@@ -306,14 +422,23 @@
               "score": false
             }
           ]
+<<<<<<< HEAD
+        },
+        {
+=======
         }, 
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 4,
           "title": "Bài hát'Người lạ ơi' có bao nhiêu thứ để mượn?",
           "answers": [
             {
               "answerText": "4",
+<<<<<<< HEAD
+              "score": false
+=======
               "score":false
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
             },
             {
               "answerText": "3",
@@ -328,8 +453,13 @@
               "score": false
             }
           ]
+<<<<<<< HEAD
+        },
+        {
+=======
         }, 
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 5,
           "title": "Trông điệp khúc bài' Anh cứ đi đi' em đã đuổi anh đi bao nhiêu lần?",
           "answers": [
@@ -353,12 +483,19 @@
         }
       ]
     },
+<<<<<<< HEAD
+    {
+      "id": 4,
+      "queries": [
+        {
+=======
 	
 	{
       "id": 4,
       "queries": [
         
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 1,
           "title": "Nhạc sĩ thiên tài W.A Mozart là người nước nào?",
           "answers": [
@@ -380,8 +517,12 @@
             }
           ]
         },
+<<<<<<< HEAD
+        {
+=======
 		
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 2,
           "title": "Dấu hóa bất thường được đặt ở đâu trng khuôn nhạc?",
           "answers": [
@@ -399,11 +540,19 @@
             },
             {
               "answerText": "Cả A,B,C",
+<<<<<<< HEAD
+              "score": false
+            }
+          ]
+        },
+        {
+=======
               "score":false
             }
           ]
         }, 
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 3,
           "title": "Bài' Ngày đầu tiên đi học'là sáng tác của ai?",
           "answers": [
@@ -424,14 +573,23 @@
               "score": false
             }
           ]
+<<<<<<< HEAD
+        },
+        {
+=======
         }, 
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 4,
           "title": "Khuôn nhạc gồm mấy dòng và mấy khe?",
           "answers": [
             {
               "answerText": "Bốn dòng bốn khe",
+<<<<<<< HEAD
+              "score": false
+=======
               "score":false
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
             },
             {
               "answerText": "Bốn dòng năm khe",
@@ -446,8 +604,13 @@
               "score": false
             }
           ]
+<<<<<<< HEAD
+        },
+        {
+=======
         }, 
 		{
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
           "id": 5,
           "title": "Nhạc sĩ Văn Cao sáng tác bài Tiến quân ca (Quốc ca) vào năm nào?",
           "answers": [
@@ -471,6 +634,9 @@
         }
       ]
     }
+<<<<<<< HEAD
+=======
 	
+>>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
   ]
 }
