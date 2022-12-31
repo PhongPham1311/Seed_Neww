@@ -6,8 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:init_firebase/playpvp.dart';
 import 'package:init_firebase/ready.dart';
 
-import 'already.dart';
-
 class RoomPvp extends StatelessWidget {
   RoomPvp({super.key, required this.roomid, required this.index});
   String roomid;
