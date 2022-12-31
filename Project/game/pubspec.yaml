@@ -170,17 +170,11 @@ flutter:
      - data/programming.json
      - data/geography.json
      - data/literature.json
-<<<<<<< HEAD
      - data/online.json
      - data/mucsic.json
      - img/circle.gif
      - img/level1.png
      - img/fire.gif
-=======
-     - data/mucsic.json
-     - img/circle.gif
-     - img/level1.png
->>>>>>> d7da49bfee322d4c2cf3ee4727baf044d3483799
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
