@@ -3,8 +3,7 @@
     {
       "id": 1,
       "queries": [
-        
-		{
+        {
           "id": 1,
           "title": "Có bao nhiêu nốt nhạc cơ bản?",
           "answers": [
@@ -26,18 +25,17 @@
             }
           ]
         },
-		
-		{
+        {
           "id": 2,
           "title": "Thể loại nào thường được giới trẻ sử dụng vào các chuyên mục đường phố?",
           "answers": [
             {
-              "answerText":"Rock",
+              "answerText": "Rock",
               "score": false
             },
             {
               "answerText": "Hip Hop",
-              "score":true
+              "score": true
             },
             {
               "answerText": "Jazz",
@@ -45,11 +43,11 @@
             },
             {
               "answerText": "R&B",
-              "score":false
+              "score": false
             }
           ]
-        }, 
-		{
+        },
+        {
           "id": 3,
           "title": "Nhạc công là gì?",
           "answers": [
@@ -70,18 +68,18 @@
               "score": false
             }
           ]
-        }, 
-		{
+        },
+        {
           "id": 4,
           "title": "Loại nhạc cụ truyền thống độc đáo của vùng núi phía Bắc là gì?",
           "answers": [
             {
               "answerText": "Sáo Trúc",
-              "score":false
+              "score": false
             },
             {
               "answerText": "Khèn",
-              "score":true
+              "score": true
             },
             {
               "answerText": "Đàn nhị",
@@ -92,8 +90,8 @@
               "score": false
             }
           ]
-        }, 
-		{
+        },
+        {
           "id": 5,
           "title": "Cao độ là gì?",
           "answers": [
@@ -117,12 +115,10 @@
         }
       ]
     },
-	
-	{
+    {
       "id": 2,
       "queries": [
-        
-		{
+        {
           "id": 1,
           "title": "Trường độ là gì?",
           "answers": [
@@ -144,8 +140,7 @@
             }
           ]
         },
-		
-		{
+        {
           "id": 2,
           "title": "Ai là tác giả bài hát Lên đàng?",
           "answers": [
@@ -166,17 +161,17 @@
               "score": true
             }
           ]
-        }, 
-		{
+        },
+        {
           "id": 3,
           "title": "Nốt nhạc nào sau đây có trường độ dài nhất?",
           "answers": [
             {
-              "answerText": nốt đen",
+              "answerText": "nốt đen",
               "score": false
             },
             {
-              "answerText":"nốt trắng",
+              "answerText": "nốt trắng",
               "score": true
             },
             {
@@ -188,18 +183,18 @@
               "score": false
             }
           ]
-        }, 
-		{
+        },
+        {
           "id": 4,
           "title": "“Chèo” thuộc loại hình nghệ thuật nào sau đây?",
           "answers": [
             {
               "answerText": "nghệ thuật sân khấu cổ",
-              "score":true
+              "score": true
             },
             {
               "answerText": "nghệ thuật đương đại",
-              "score":false
+              "score": false
             },
             {
               "answerText": "nghệ hiện đại",
@@ -210,8 +205,8 @@
               "score": false
             }
           ]
-        }, 
-		{
+        },
+        {
           "id": 5,
           "title": "Bass là loại thanh điệu nào ?",
           "answers": [
@@ -229,18 +224,16 @@
             },
             {
               "answerText": "giọng nữ trầm",
-              "score":false
+              "score": false
             }
           ]
         }
       ]
     },
-	
-	{
+    {
       "id": 3,
       "queries": [
-        
-		{
+        {
           "id": 1,
           "title": "Điền vào ô trống Do>Re>Mi>[...]>[...]>La>Si?",
           "answers": [
@@ -250,7 +243,7 @@
             },
             {
               "answerText": "<Sol>,<Fa>t",
-              "score":false
+              "score": false
             },
             {
               "answerText": "<Pa>,<Son>",
@@ -262,8 +255,7 @@
             }
           ]
         },
-		
-		{
+        {
           "id": 2,
           "title": "Trong ca khúc:'Dàn đồng ca mùa hạ' của Nguyễn Minh Châu, 'Dàn đồng ca mùa hạ' ở đây dùng để chỉ điều gì?",
           "answers": [
@@ -277,15 +269,15 @@
             },
             {
               "answerText": "Tiếng hát trưa hè",
-              "score":false
+              "score": false
             },
             {
               "answerText": "Tiếng suối róc rách",
               "score": false
             }
           ]
-        }, 
-		{
+        },
+        {
           "id": 3,
           "title": "Bài hát Lý cây đa thuộc dân ca vùng nào?",
           "answers": [
@@ -306,14 +298,14 @@
               "score": false
             }
           ]
-        }, 
-		{
+        },
+        {
           "id": 4,
           "title": "Bài hát'Người lạ ơi' có bao nhiêu thứ để mượn?",
           "answers": [
             {
               "answerText": "4",
-              "score":false
+              "score": false
             },
             {
               "answerText": "3",
@@ -328,8 +320,8 @@
               "score": false
             }
           ]
-        }, 
-		{
+        },
+        {
           "id": 5,
           "title": "Trông điệp khúc bài' Anh cứ đi đi' em đã đuổi anh đi bao nhiêu lần?",
           "answers": [
@@ -353,12 +345,10 @@
         }
       ]
     },
-	
-	{
+    {
       "id": 4,
       "queries": [
-        
-		{
+        {
           "id": 1,
           "title": "Nhạc sĩ thiên tài W.A Mozart là người nước nào?",
           "answers": [
@@ -380,8 +370,7 @@
             }
           ]
         },
-		
-		{
+        {
           "id": 2,
           "title": "Dấu hóa bất thường được đặt ở đâu trng khuôn nhạc?",
           "answers": [
@@ -399,11 +388,11 @@
             },
             {
               "answerText": "Cả A,B,C",
-              "score":false
+              "score": false
             }
           ]
-        }, 
-		{
+        },
+        {
           "id": 3,
           "title": "Bài' Ngày đầu tiên đi học'là sáng tác của ai?",
           "answers": [
@@ -424,14 +413,14 @@
               "score": false
             }
           ]
-        }, 
-		{
+        },
+        {
           "id": 4,
           "title": "Khuôn nhạc gồm mấy dòng và mấy khe?",
           "answers": [
             {
               "answerText": "Bốn dòng bốn khe",
-              "score":false
+              "score": false
             },
             {
               "answerText": "Bốn dòng năm khe",
@@ -446,8 +435,8 @@
               "score": false
             }
           ]
-        }, 
-		{
+        },
+        {
           "id": 5,
           "title": "Nhạc sĩ Văn Cao sáng tác bài Tiến quân ca (Quốc ca) vào năm nào?",
           "answers": [
@@ -471,6 +460,5 @@
         }
       ]
     }
-	
   ]
 }

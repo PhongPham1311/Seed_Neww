@@ -9,6 +9,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'firstgame.dart';
 import 'login.dart';
 import 'register.dart';
+import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_screen_wake/flutter_screen_wake.dart';
+import 'package:perfect_volume_control/perfect_volume_control.dart';
 
 Future<void> main(List<String> args) async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,6 +29,32 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return Music();
+  }
+}
+
+class Music extends StatefulWidget {
+  const Music({super.key});
+
+  @override
+  State<Music> createState() => _MusicState();
+}
+
+class _MusicState extends State<Music> {
+  final player = AudioPlayer();
+  void playLocal() async {
+    await player.play(AssetSource("audio/QuizMusic.mp3"));
+  }
+
+  void loop() {
+    player.setReleaseMode(ReleaseMode.loop);
+  }
+
+
+  @override
+  Widget build(BuildContext context) {
+    playLocal();
+    loop();
     return MyHomePage();
   }
 }
@@ -54,19 +84,8 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {});
   }
 
-  final player = AudioPlayer();
-  void playLocal() async {
-    await player.play(AssetSource("audio/QuizMusic.mp3"));
-  }
-
-  void loop() {
-    player.setReleaseMode(ReleaseMode.loop);
-  }
-
   @override
   void initState() {
-    playLocal();
-    loop();
     get_id();
     get_is_logined();
     super.initState();

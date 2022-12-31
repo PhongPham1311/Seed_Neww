@@ -610,7 +610,7 @@ class _RankPVPState extends State<RankPVP> {
                 Container(
                   margin: EdgeInsets.only(left: 5),
                   width: 320,
-                  height: 90,
+                  height: 80,
                   padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
                   alignment: Alignment.center,
                   decoration: const BoxDecoration(
@@ -660,8 +660,32 @@ class _RankPVPState extends State<RankPVP> {
             );
           } else {
             return Center(
-              child: CircularProgressIndicator(),
-            );
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'img/fire.gif',
+                          width: 150,
+                          height: 150,
+                        ),
+                        Text(
+                          'Đang tải',
+                          style: TextStyle(
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(5, 3),
+                                  blurRadius: 10,
+                                  color: Colors.black,
+                                ),
+                              ],
+                              color: Colors.white,
+                              fontFamily: 'Mono',
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800),
+                        )
+                      ],
+                    ),
+                  );
           }
         },
       ),
@@ -1182,7 +1206,7 @@ class _RankForYouState extends State<RankForYou> {
                 Container(
                   margin: EdgeInsets.only(left: 5),
                   width: 320,
-                  height: 90,
+                  height: 80,
                   padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
                   alignment: Alignment.center,
                   decoration: const BoxDecoration(
@@ -1247,8 +1271,32 @@ class _RankForYouState extends State<RankForYou> {
             );
           } else {
             return Center(
-              child: CircularProgressIndicator(),
-            );
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'img/fire.gif',
+                          width: 150,
+                          height: 150,
+                        ),
+                        Text(
+                          'Đang tải',
+                          style: TextStyle(
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(5, 3),
+                                  blurRadius: 10,
+                                  color: Colors.black,
+                                ),
+                              ],
+                              color: Colors.white,
+                              fontFamily: 'Mono',
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800),
+                        )
+                      ],
+                    ),
+                  );
           }
         },
       ),

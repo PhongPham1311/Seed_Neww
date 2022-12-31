@@ -64,3 +64,16 @@ class ProgrammingProvider {
     return lsresult;
   }
 }
+class OnlineProvider {
+  static Future<List<dynamic>> readJsonData() async {
+    var jsonText = await rootBundle.loadString('data/online.json');
+    var data = json.decode(jsonText);
+    return data['queries'];
+  }
+  static Future<List<Querriess>> getAllQuerries() async {
+    List<Querriess> lsresult = [];
+    List<dynamic> data = await readJsonData();
+    lsresult = data.map((e) => Querriess.fromJson(e)).toList();
+    return lsresult;
+  }
+}

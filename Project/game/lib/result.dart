@@ -1,6 +1,7 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
 import "package:flutter/material.dart";
+import 'package:init_firebase/main_game.dart';
 import 'package:init_firebase/objects/Profile.dart';
 import 'package:init_firebase/screen_waiting.dart';
 
@@ -351,7 +352,10 @@ class _ResultMathState extends State<ResultMath> {
                                   fontWeight: FontWeight.w800),
                             ),
                             onTap: () {
-                              Navigator.pop(context);
+                               Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => MainGame()));
                             },
                           ),
                         ),

@@ -65,20 +65,69 @@ class _ProfilesState extends State<Profiles> {
                       return builduser(you,this.widget.isyou,countmath,percent);
                     } else {
                       return Center(
-                        child: CircularProgressIndicator(),
-                      );
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'img/fire.gif',
+                          width: 150,
+                          height: 150,
+                        ),
+                        Text(
+                          'Đang tải',
+                          style: TextStyle(
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(5, 3),
+                                  blurRadius: 10,
+                                  color: Colors.black,
+                                ),
+                              ],
+                              color: Colors.white,
+                              fontFamily: 'Mono',
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800),
+                        )
+                      ],
+                    ),
+                  );
                     }
                   });
             } else {
               return Center(
-                child: CircularProgressIndicator(),
-              );
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'img/fire.gif',
+                          width: 150,
+                          height: 150,
+                        ),
+                        Text(
+                          'Đang tải',
+                          style: TextStyle(
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(5, 3),
+                                  blurRadius: 10,
+                                  color: Colors.black,
+                                ),
+                              ],
+                              color: Colors.white,
+                              fontFamily: 'Mono',
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800),
+                        )
+                      ],
+                    ),
+                  );
             }
           },
         ));
   }
 
   Widget builduser(Profile user,bool isyou,int countmath,double percent) {
+    String percentst = percent.toStringAsFixed(2);
     return Stack(
       alignment: Alignment.topCenter,
       children: [
@@ -228,7 +277,7 @@ class _ProfilesState extends State<Profiles> {
                                           fontWeight: FontWeight.w800),
                                     ),
                                     Text(
-                                      '$percent %',
+                                      '$percentst %',
                                       style: TextStyle(
                                           color: Color.fromARGB(
                                               255, 242, 197, 116),

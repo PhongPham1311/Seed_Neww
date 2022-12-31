@@ -144,7 +144,6 @@ class _PlayPvpState extends State<PlayPvp> {
     timer = Timer.periodic(Duration(seconds: 1), (_) {
       if (totaltime == 0) {
         timer?.cancel();
-        totalgold = totalgold! - gold!;
         if (scoreyou > scorenotyou) {
           List<String> temp = Uprank(
               this.widget.user1['rank'], this.widget.user1['rank_detail']);
@@ -156,7 +155,7 @@ class _PlayPvpState extends State<PlayPvp> {
           doc.update({
             'rank': temp[0],
             "rank_detail": temp[1],
-            "gold": totalgold,
+            "gold": gold,
             "star": star
           });
         } else if (scoreyou < scorenotyou) {
@@ -171,12 +170,11 @@ class _PlayPvpState extends State<PlayPvp> {
             doc.update({
               'rank': temp[0],
               "rank_detail": temp[1],
-              "gold": totalgold,
+              "gold": gold,
               "star": star
             });
           } else {
-            doc.update(
-                {'rank': temp[0], "rank_detail": temp[1], "gold": totalgold});
+            doc.update({'rank': temp[0], "rank_detail": temp[1], "gold": gold});
           }
         }
         Navigator.pop(context);
@@ -268,7 +266,7 @@ class _PlayPvpState extends State<PlayPvp> {
       fuc_5050 = false;
     }
     if (gold! < 50) {
-      fuc_x2 = false;
+      fuc_time = false;
     }
   }
 
@@ -294,8 +292,38 @@ class _PlayPvpState extends State<PlayPvp> {
                             height: MediaQuery.of(context).size.height - 300,
                             child: Center(
                               child: timecoutdown == 0
-                                  ? Text('Bắt Đầu')
-                                  : Text('${timecoutdown.toString()}'),
+                                  ? Text(
+                                      'Bắt Đầu',
+                                      style: TextStyle(
+                                          shadows: [
+                                            Shadow(
+                                              offset: Offset(5, 3),
+                                              blurRadius: 10,
+                                              color: Colors.black,
+                                            ),
+                                          ],
+                                          color: Color.fromARGB(
+                                              255, 255, 255, 255),
+                                          fontFamily: 'Mono',
+                                          fontSize: 28,
+                                          fontWeight: FontWeight.w800),
+                                    )
+                                  : Text(
+                                      '${timecoutdown.toString()}',
+                                      style: TextStyle(
+                                          shadows: [
+                                            Shadow(
+                                              offset: Offset(5, 3),
+                                              blurRadius: 10,
+                                              color: Colors.black,
+                                            ),
+                                          ],
+                                          color: Color.fromARGB(
+                                              255, 255, 255, 255),
+                                          fontFamily: 'Mono',
+                                          fontSize: 28,
+                                          fontWeight: FontWeight.w800),
+                                    ),
                             )),
                         Column(
                           children: [
@@ -1483,23 +1511,25 @@ class _PlayPvpState extends State<PlayPvp> {
                                   children: [
                                     InkWell(
                                       onTap: () {
-                                        gold = gold! - 250;
-                                        int stt = 0;
-                                        for (int tmp = 1; tmp < 5; tmp++) {
-                                          if (snapshot
-                                                  .child('score${i}${tmp}')
-                                                  .value ==
-                                              false) {
-                                            if (tmp == 1) fuc1 = false;
-                                            if (tmp == 2) fuc2 = false;
-                                            if (tmp == 3) fuc3 = false;
-                                            if (tmp == 4) fuc4 = false;
-                                            stt++;
+                                        if (fuc_master) {
+                                          gold = gold! - 250;
+                                          int stt = 0;
+                                          for (int tmp = 1; tmp < 5; tmp++) {
+                                            if (snapshot
+                                                    .child('score${i}${tmp}')
+                                                    .value ==
+                                                false) {
+                                              if (tmp == 1) fuc1 = false;
+                                              if (tmp == 2) fuc2 = false;
+                                              if (tmp == 3) fuc3 = false;
+                                              if (tmp == 4) fuc4 = false;
+                                              stt++;
+                                            }
+                                            if (stt == 3) break;
                                           }
-                                          if (stt == 3) break;
+                                          updategold();
+                                          setState(() {});
                                         }
-                                        updategold();
-                                        setState(() {});
                                       },
                                       child: Container(
                                         alignment: Alignment.center,
@@ -1550,7 +1580,7 @@ class _PlayPvpState extends State<PlayPvp> {
                                   children: [
                                     InkWell(
                                       onTap: () {
-                                        if (fuc_x2) {
+                                        if (fuc_x2 == true) {
                                           gold = gold! - 200;
                                           x2score = 2;
                                           fuc_x2 = false;
@@ -1605,23 +1635,35 @@ class _PlayPvpState extends State<PlayPvp> {
                                 ),
                                 Column(
                                   children: [
-                                    Container(
-                                      alignment: Alignment.center,
-                                      width: 60,
-                                      height: 60,
-                                      decoration: const BoxDecoration(
-                                        image: DecorationImage(
-                                            image: AssetImage('img/level1.png'),
-                                            fit: BoxFit.fill),
-                                      ),
-                                      child: Text(
-                                        '+5 giây',
-                                        style: TextStyle(
-                                          fontFamily: "Mono",
-                                          fontSize: 15,
-                                          color: Color.fromARGB(
-                                              255, 255, 255, 255),
-                                          fontWeight: FontWeight.w600,
+                                    InkWell(
+                                      onTap: () {
+                                        if (fuc_time == true) {
+                                          time += 5;
+                                          fuc_time = false;
+                                          setState(() {});
+                                        }
+                                      },
+                                      child: Container(
+                                        alignment: Alignment.center,
+                                        width: 60,
+                                        height: 60,
+                                        decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                              image: fuc_time
+                                                  ? AssetImage('img/level.png')
+                                                  : AssetImage(
+                                                      'img/level1.png'),
+                                              fit: BoxFit.fill),
+                                        ),
+                                        child: Text(
+                                          '+5 giây',
+                                          style: TextStyle(
+                                            fontFamily: "Mono",
+                                            fontSize: 15,
+                                            color: Color.fromARGB(
+                                                255, 255, 255, 255),
+                                            fontWeight: FontWeight.w600,
+                                          ),
                                         ),
                                       ),
                                     ),

@@ -194,10 +194,10 @@ _messagebox(BuildContext context, String info) {
               ),
               //positon được dùng trong widget stack dùng để chỉnh vị trí của witget con của positon ở vị trí mong muốn
               const Positioned(
-                top: 15,
-                left: 60,
+                top: 18,
+                left: 30,
                 child: Text(
-                  'Lỗi',
+                  'Thông Báo',
                   style: TextStyle(
                       shadows: [
                         Shadow(
@@ -208,7 +208,7 @@ _messagebox(BuildContext context, String info) {
                       ],
                       color: Colors.white,
                       fontFamily: 'Mono',
-                      fontSize: 20,
+                      fontSize: 17,
                       fontWeight: FontWeight.w600),
                 ),
               )

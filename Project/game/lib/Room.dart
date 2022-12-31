@@ -86,7 +86,7 @@ class RoomPvp extends StatelessWidget {
                                   mainAxisSize: MainAxisSize.max,
                                   children: const [
                                     Text(
-                                      'ĐANG TÌM ĐỐI THỦ',
+                                      'Đang Tìm Đối Thủ',
                                       style: TextStyle(
                                           shadows: [
                                             Shadow(
@@ -101,22 +101,7 @@ class RoomPvp extends StatelessWidget {
                                           fontSize: 18,
                                           fontWeight: FontWeight.w800),
                                     ),
-                                    Text(
-                                      '1 GIÂY...',
-                                      style: TextStyle(
-                                          shadows: [
-                                            Shadow(
-                                              offset: Offset(5, 3),
-                                              blurRadius: 10,
-                                              color: Colors.black,
-                                            ),
-                                          ],
-                                          color: Color.fromARGB(
-                                              255, 255, 255, 255),
-                                          fontFamily: 'Mono',
-                                          fontSize: 13,
-                                          fontWeight: FontWeight.w800),
-                                    ),
+
                                   ],
                                 ),
                               ),

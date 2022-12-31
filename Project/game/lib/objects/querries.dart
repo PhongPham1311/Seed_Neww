@@ -5,11 +5,11 @@ class Level {
     });
 
     final int id;
-    final List<Query> queries;
+    final List<Querriess> queries;
 
     factory Level.fromJson(Map<String, dynamic> json) => Level(
         id: json["id"],
-        queries: List<Query>.from(json["queries"].map((x) => Query.fromJson(x))),
+        queries: List<Querriess>.from(json["queries"].map((x) => Querriess.fromJson(x))),
     );
 
     Map<String, dynamic> toJson() => {
@@ -18,8 +18,8 @@ class Level {
     };
 }
 
-class Query {
-    Query({
+class Querriess {
+    Querriess({
         required this.id,
         required this.title,
         required this.answers,
@@ -29,7 +29,7 @@ class Query {
     final String title;
     final List<Answer> answers;
 
-    factory Query.fromJson(Map<String, dynamic> json) => Query(
+    factory Querriess.fromJson(Map<String, dynamic> json) => Querriess(
         id: json["id"],
         title: json["title"],
         answers: List<Answer>.from(json["answers"].map((x) => Answer.fromJson(x))),
